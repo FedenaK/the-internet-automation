@@ -3,15 +3,13 @@ import VisitPage from "../../pageObjects/visitPage";
 describe('Broken-Images', () => {
     beforeEach('', () => {
         cy.visit('https://the-internet.herokuapp.com/')
-    })
+    });
 
     it('Validación de imágenes y sus atributos', () => {
         const visitObj = new VisitPage();
         const brokenImages = []
 
-        cy.title().should('include','The Internet')
-        cy.get('.heading').should('have.text','Welcome to the-internet').and('be.visible')
-        cy.get('h2').should('have.text','Available Examples').and('be.visible')
+        visitObj.HomeTexts();
         visitObj.BrokenImages()
         cy.url('/broken_images')
         cy.get('h3').should('have.text','Broken Images').and('be.visible')

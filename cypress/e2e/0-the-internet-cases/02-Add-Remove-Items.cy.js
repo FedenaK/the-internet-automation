@@ -9,9 +9,7 @@ describe('Add-Remove-Items', () => {
     it('Agregar un boton y después eliminarlo', () => {
         const visitObj = new VisitPage();
 
-        cy.title().should('include','The Internet')
-        cy.get('.heading').should('have.text','Welcome to the-internet').and('be.visible')
-        cy.get('h2').should('have.text','Available Examples').and('be.visible')
+        visitObj.HomeTexts();
         visitObj.AddRemoveElemments()
         cy.url('/add_remove_elements')
         cy.get('h3').should('have.text','Add/Remove Elements').and('be.visible')

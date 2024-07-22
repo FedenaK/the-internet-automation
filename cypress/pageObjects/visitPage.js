@@ -1,6 +1,11 @@
 class VisitPage {
 
     element = {
+        homeTexts : () => {
+            cy.title().should('include','The Internet');
+            cy.get('.heading').should('have.text','Welcome to the-internet').and('be.visible');
+            cy.get('h2').should('have.text','Available Examples').and('be.visible');
+        },
         pag01 : () => cy.get(':nth-child(1) > a'),
         pag02 : () => cy.get('ul > :nth-child(2) > a'),
         pag03 : () => cy.get(':nth-child(3) > a'),
@@ -47,18 +52,25 @@ class VisitPage {
         pag44 : () => cy.get(':nth-child(44) > a')
     };
 
+    HomeTexts(element) {
+        this.element.homeTexts()
+    }
+
     ABTesting(element) {
-        this.element.pag01().should('have.text','A/B Testing').and('be.visible').click()
+        this.element.pag01().should('be.visible').and('have.text','A/B Testing').click()
     };
     AddRemoveElemments(element){
-        this.element.pag02().should('have.text','Add/Remove Elements').and('be.visible').click()
+        this.element.pag02().should('be.visible').and('have.text','Add/Remove Elements').click()
     };
     BasicAuth(){
-        cy.get('h3').should('have.text','Basic Auth').and('be.visible')
+        cy.get('h3').should('be.visible').and('have.text','Basic Auth')
         cy.contains('Congratulations')
     };
     BrokenImages(element){
-        this.element.pag04().should('have.text','Broken Images').and('be.visible').click()
+        this.element.pag04().should('be.visible').and('have.text','Broken Images').click()
+    }
+    ChallengingDOM(){
+        this.element.pag05().should('be.visible').and('have.text','Challenging DOM').click()
     }
 
 }
