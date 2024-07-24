@@ -72,7 +72,12 @@ class VisitPage {
     ChallengingDOM(){
         this.element.pag05().should('be.visible').and('have.text','Challenging DOM').click()
     }
-
+    Checkboxes(){
+        this.element.pag06().should('be.visible').and('have.text','Checkboxes').click()
+    }
+    ContextMenu(){
+        this.element.pag07().should('be.visible').and('have.text','Context Menu').click()
+    }
 }
 
 export default VisitPage
