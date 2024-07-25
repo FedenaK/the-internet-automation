@@ -78,6 +78,9 @@ class VisitPage {
     ContextMenu(){
         this.element.pag07().should('be.visible').and('have.text','Context Menu').click()
     }
+    Dropdown(){
+        this.element.pag11().should('be.visible').and('have.text','Dropdown').click()
+    }
 }
 
 export default VisitPage
