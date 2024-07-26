@@ -81,6 +81,9 @@ class VisitPage {
     Dropdown(){
         this.element.pag11().should('be.visible').and('have.text','Dropdown').click()
     }
+    FormAuthentication(){
+        this.element.pag21().should('be.visible').and('have.text','Form Authentication').click()
+    }
 }
 
 export default VisitPage

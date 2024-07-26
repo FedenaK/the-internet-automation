@@ -10,7 +10,8 @@ describe('Dropdown', () => {
         
         visitObj.HomeTexts();
         visitObj.Dropdown();
-
+        
+        cy.url('/dropdown')
         cy.get('h3').should('be.visible').and('have.text','Dropdown List')
         //Select by name:
         cy.get('#dropdown').select('Option 1').select('Option 2');
