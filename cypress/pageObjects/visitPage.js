@@ -84,6 +84,9 @@ class VisitPage {
     FormAuthentication(){
         this.element.pag21().should('be.visible').and('have.text','Form Authentication').click()
     }
+    Frames(){
+        this.element.pag22().should('be.visible').and('have.text','Frames').click()
+    }
 }
 
 export default VisitPage

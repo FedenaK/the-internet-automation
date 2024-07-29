@@ -3,6 +3,7 @@ import ChallengingDomPage from "../../pageObjects/challengingDomPage/05-challeng
 
 describe('Challenging-DOM', () => {
     beforeEach('', () => {
+        cy.intercept('GET', 'https://298279967.log.optimizely.com/event*', { statusCode: 200, body: {} });
         cy.visit('https://the-internet.herokuapp.com/')
     });
 

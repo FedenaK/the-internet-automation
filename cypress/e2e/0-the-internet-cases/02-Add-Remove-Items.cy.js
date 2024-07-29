@@ -3,6 +3,7 @@ import VisitPage from "../../pageObjects/visitPage";
 describe('Add-Remove-Items', () => {
 
     beforeEach('', () => {
+        cy.intercept('GET', 'https://298279967.log.optimizely.com/event*', { statusCode: 200, body: {} });
         cy.visit('https://the-internet.herokuapp.com/')
     });
 
