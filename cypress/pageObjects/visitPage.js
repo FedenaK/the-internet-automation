@@ -87,6 +87,9 @@ class VisitPage {
     Frames(){
         this.element.pag22().should('be.visible').and('have.text','Frames').click()
     }
+    StatusCodes(){
+        this.element.pag42().should('be.visible').and('have.text','Status Codes').click()
+    }
 }
 
 export default VisitPage
