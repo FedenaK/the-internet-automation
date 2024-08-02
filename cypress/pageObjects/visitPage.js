@@ -81,6 +81,9 @@ class VisitPage {
     Dropdown(){
         this.element.pag11().should('be.visible').and('have.text','Dropdown').click()
     }
+    FloatingMenu() {
+        this.element.pag19().should('be.visible').and('have.text','Floating Menu').click()
+    }
     FormAuthentication(){
         this.element.pag21().should('be.visible').and('have.text','Form Authentication').click()
     }
