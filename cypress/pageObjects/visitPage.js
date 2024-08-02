@@ -90,6 +90,9 @@ class VisitPage {
     StatusCodes(){
         this.element.pag42().should('be.visible').and('have.text','Status Codes').click()
     }
+    Hovers(){
+        this.element.pag25().should('be.visible').and('have.text','Hovers').click()
+    }
 }
 
 export default VisitPage
